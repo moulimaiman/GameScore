@@ -1,42 +1,88 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title> Score </title>
-    <link rel="stylesheet" href="style1.css">
-    <link rel="icon" href="img.ico">
-    <script src="script1.js"></script>
+    <title> Message </title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.ico">
 </head>
 
 <body>
-    <section class="welcome" id="welcome">
-        <h1 class="titre"> Game Score </h1>
-        <marquee> <p class="version"> Version : 1.0 </p> </marquee> 
-    </section>
     <div>
-        <div>
-            <h1 class="titre" id="titre"> Game Score </h1>
-            <p class="score"> Score : <span id="sco"> 0 </span> </p>
-            <progress max="100" value="100" id="prog"></progress> <span id="valprog">100%</span> <br>
-            <p class="descr"> Objet's Position : ( <span id="x0">0</span> , <span id="y0">0</span> ) </p>
-            <p class="descr"> Vs Objet's Position : ( <span id="i0">0</span> , <span id="j0">0</span> ) </p>
-        </div> <br>
-        <div class="espace0">
-            <input type="button" value="||" onclick="stoop()" id="stop"><input type="button" value="|>" onclick="staar()" id="star">
-            <input type="button" value=">O" onclick="reepeet()" id="reppt">
-            <form class="espace">
-                <section id="objet"></section>
-                <section id="obvs"></section>
-            </form>
-        </div>
-        <div id="ctrl">
-            <input type="button" value="^" onclick="uup()" class="ctrl"> <br>
-            <input type="button" value="<" onclick="leeft()" class="ctrl">
-            <input type="button" value="v" onclick="doown()" class="ctrl">
-            <input type="button" value=">" onclick="riight()" class="ctrl">
-        </div>
-        <hr>
-        <address class="droit"> ( Version : 1.0 ) || By Aiman_Moulim </address>
-        <p class="update"> Waiting The fixes at Next Update ! </p>
+        <h1 class="titrepage"> Message </h1>
+    </div>
+    <div class="struct">
+        <form class="content">
+            <div id="nameinfo">
+                <div id="proprety" onmouseover="infoproprety()" onmouseleave="hidproprety()">
+                    <span id="editname" onclick="namenumberedit()"> Edit Name </span>
+                </div>
+                <div id="createname" onmouseleave="hidcreatename()">
+                    <div><label for="newname" id="newname0"> Name : <input type="text" placeholder="New Name" id="newname"> </label> </div> <br>
+                    <div><label for="newnumber" id="newnumber0"> Number : <input type="text" placeholder="New Number" id="newnumber"> </label> </div> <br>
+                    <input type="button" value="Change" onclick="editchange()" id="butchangen">
+                </div>
+                <div class="elemnt">
+                    <input type="button" value=" | " id="optin" onmouseover="infoproprety()"
+                        onmouseleave="hidproprety()">
+                    <input type="button" value="->" id="retr" onclick="infonamehid()">
+                </div>
+                <div>
+                    <div>
+                        <img src="img.jpg" id="imagepersn">
+                    </div>
+                    <div>
+                        <p id="namepersn"> Aiman Moulim </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="calldata">
+                     <span id="detailinfo" onmousemove="viewdetail()" onmouseleave="hidetail()"> Details </span>
+                </div>
+                <div id="infodetail" onmousemove="viewdetail()" onmouseleave="hidetail()">
+                </div>
+
+            </div>
+            <div id="seeoption" onmouseleave="hidoptions()">
+                <ul id="listoptions">
+                    <li id="option1" onclick="infonameviiiew()"> Cantact Info </li>
+                    <li id="option2" onclick="editbackg()"> Edit Background </li>
+                </ul>
+            </div>
+            <div id="colorbackg">
+                <input type="text" placeholder="Background-Color" id="backgdcolor"> <br>
+                <input type="button" value="Appel" onclick="changebackg()" id="butchangebackg">
+            </div>
+            <section class="name">
+                <div class="structname">
+                    <div class="option">
+                        <span id="opt1" onclick="seeoptions()"> Settings </span>
+                    </div>
+                    <div class="name0">
+                        <span id="nam" onclick="infonameview()"> Messager_Math </span>
+                        <img src="img.jpg" id="imgpersn">
+                    </div>
+                </div>
+            </section>
+            <div id="messg">
+                <section id="contentmessg">
+
+                </section>
+            </div>
+            <section class="barsent">
+                <div class="structsent">
+                    <div class="addsent">
+                        <span id="sentmessg" onclick="createmessg()"> SEND </span>
+                    </div>
+                    <div class="write">
+                        <input type="text" id="writemessg" onkeydown="createmessg2(event)">
+                            
+                        </textarea>
+                    </div>
+                </div>
+            </section>
+        </form>
     </div>
 </body>
 
